@@ -8,7 +8,7 @@ body {
 /**** Header ******/
 .header {
   width: 100%;
-  height: 230px;
+  height: 14rem;
   background-color: #e60013;
   display: flex;
   flex-direction: column;
@@ -29,4 +29,24 @@ body {
 }
 
 /***** Main ******/
+.main__cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+  gap: 15px;
+}
 
+.main__card {
+  width: 20rem;
+  height: 20rem;
+  list-style: none;
+  border: 1px solid #d41b1b;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.main__card-image {
+  width: 10rem;
+  height: auto;
+}
