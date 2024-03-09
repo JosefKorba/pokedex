@@ -17,7 +17,7 @@ const displayPokemon = (pokemon) => {
     const firstLetter = pal.name.charAt(0).toUpperCase();
     const firstLetterCaps = firstLetter + pal.name.slice(1);
 
-       return `<li class="main__card">
+    return `<li class="main__card">
                 <img class="main__card-image" src="${pal.sprites.front_default}"/>
                 <h2 class="main__card-title">${pal.id}. ${firstLetterCaps}</h2>
             </li>`
@@ -34,3 +34,18 @@ Promise.all(pokemonPromises).then(pokemonArray => {
     displayPokemon(pokemonArray);
 });
 
+
+// Search pokemon
+document.getElementById('search-button').addEventListener('click', function() {
+  const searchTerm = document.querySelector('.header__search').value.toLowerCase();
+  const pokemonList = document.querySelectorAll('.main__card');
+
+  pokemonList.forEach(pokemonCard => {
+      const pokemonName = pokemonCard.querySelector('.main__card-title').textContent.toLowerCase();
+      if (pokemonName.includes(searchTerm)) {
+          pokemonCard.style.display = 'block';
+      } else {
+          pokemonCard.style.display = 'none';
+      }
+  });
+});
