@@ -4,6 +4,7 @@ body {
   box-sizing: border-box;
   font-size: 1rem;
   font-family: 'Arial', sans-serif;
+  
 }
 
 /**** Header ******/
@@ -27,7 +28,6 @@ body {
 .header__search:focus {
   outline: none;
   border: 2px solid #272626;
-  
 }
 
 .header__search--button {
@@ -52,7 +52,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 3rem;
-  gap: 15px;
+  gap: 30px;
 }
 
 .main__card {
@@ -62,8 +62,7 @@ body {
   text-align: center;
   border-radius: 30px;
   background: #e0e0e0;
-  box-shadow: 15px 15px 30px #bebebe,
-             -15px -15px 30px #ffffff;
+  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
 }
 
 .main__card-image {
@@ -74,3 +73,4 @@ body {
   border: 1px solid rgb(146, 141, 141);
   background-color: #fff;
 }
+
